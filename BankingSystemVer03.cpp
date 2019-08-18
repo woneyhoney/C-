@@ -1,4 +1,4 @@
-/* Baning System Ver 0.3 */
+/* Baning System Ver 0.4 */
 #include <iostream>
 #include <cstring>
 
@@ -32,7 +32,7 @@ class Account{
                 strcpy(cusName, ref.cusName);
         }
 
-        int GetAccID() { return accID; }
+        int GetAccID() const { return accID; }
         void Deposit(int money){
             balance+=money;
         }
@@ -43,7 +43,7 @@ class Account{
             balance-=money;
             return money;
         }
-        void ShowAccInfo(){
+        void ShowAccInfo() const {
             cout<<"°èÁÂID: "<<accID<<endl;
             cout<<"ÀÌ¸§: "<<cusName<<endl;
             cout<<"ÀÜ¾×: "<<balance<<endl;
